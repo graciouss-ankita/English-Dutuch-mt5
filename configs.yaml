@@ -1,0 +1,17 @@
+model:
+  name: google/mt5-base
+
+data:
+  train_path: data/train.csv
+
+training:
+  batch_size: 2
+  max_length: 512
+  lr: 0.0002
+  epochs: 3
+  output_dir: checkpoints/mt5-lora-en-nl
+
+lora:
+  r: 8
+  alpha: 32
+  dropout: 0.1
